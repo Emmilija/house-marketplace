@@ -10,7 +10,7 @@ import {toast} from 'react-toastify'
 
 
 function EditListing() {
-  //eslint-disable-next-line
+  // eslint-disable-next-line
   const [geolocationEnabled, setGeolocationEnabled] = useState(true);
   const [listing, setListing] =useState(false)
   const [loading, setLoading] = useState(false);
@@ -94,6 +94,7 @@ fetchListing()
     return () => {
       isMounted.current = false;
     };
+    // eslint-disable-next-line
   }, [isMounted]);
 
   
@@ -158,7 +159,9 @@ const storeImage = async (image) => {
         break;
       case 'running':
         console.log('Upload is running');
-        break;
+        break
+        default:
+          break
     }
   }, 
   (error) => {
